@@ -20,7 +20,7 @@ const CalculeTotal=()=>{
 let total=0;
 element.forEach(item => {
   const produit=api.find((prod)=>prod.id===item.id);
-  total+=produit.price * item.quantity;
+  total+=produit.price;
 });
 
 
@@ -34,7 +34,7 @@ console.log(element);
      <div>
 {
   api.map((item)=>( 
-    <div key={item.id}>
+    <div key={item.id} className={styles.produits}>
         <h2>{item.name}</h2>
         <p>{item.price}</p>
         <button onClick={() => addTopanier(item)}>Ajout produit</button>
@@ -59,7 +59,7 @@ console.log(element);
   }
  </div>
 
- <h2>total:{CalculeTotal} </h2>
+ <h2>Total:{CalculeTotal()} </h2>
   </div>
   )
 }

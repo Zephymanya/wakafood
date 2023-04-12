@@ -2,7 +2,7 @@ export const api = [
     {
       id: "1",
       name: "Big Mac",
-      price: "$3.99",
+      price: 3.99,
       image:
         "https://www.mcdonalds.com/content/dam/usa/nfl/assets/nav/arches-logo_50.png",
       description:
@@ -11,7 +11,7 @@ export const api = [
     {
       id: "2",
       name: "Whopper",
-      price: "$4.99",
+      price: 4.99,
       image:
         "https://www.bk.com/sites/default/files/2021-04/new-whopper-web-hero_0.png",
       description:
@@ -20,7 +20,7 @@ export const api = [
     {
       id: "3",
       name: "Original Chicken Sandwich",
-      price: "$5.99",
+      price: 5.99,
       image:
         "https://www.bk.com/sites/default/files/2021-04/original-chicken-sandwich-web-hero.png",
       description:
@@ -29,7 +29,7 @@ export const api = [
     {
       id: "4",
       name: "Classic Cheeseburger",
-      price: "$2.99",
+      price: 2.99,
       image:
         "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/assets/nav/arches-logo_50.png",
       description:
@@ -38,7 +38,7 @@ export const api = [
     {
       id: "5",
       name: "Famous Bowl",
-      price: "$6.99",
+      price: 6.99,
       image:
         "https://www.kfc.com/hubfs/2021%20Menus%20Menu/Menu-Identify/Famous-Bowl.png",
       description:
@@ -47,7 +47,7 @@ export const api = [
     {
       id: "6",
       name: "Double Whopper",
-      price: "$7.99",
+      price: 7.99,
       image:
         "https://www.bk.com/sites/default/files/2021-04/double-whopper-web-hero.png",
       description:
@@ -56,7 +56,7 @@ export const api = [
     {
       id: "7",
       name: "Chicken McNuggets",
-      price: "$4.99",
+      price: 4.99,
       image:
         "https://www.mcdonalds.com/content/dam/usa/nfl/assets/nav/arches-logo_50.png",
       description:
@@ -65,7 +65,7 @@ export const api = [
     {
       id: "8",
       name: "Impossible Whopper",
-      price: "$5.99",
+      price: 5.99,
       image:
         "https://www.bk.com/sites/default/files/2021-04/impossible-whopper-web-hero.png",
       description:
@@ -74,7 +74,7 @@ export const api = [
     {
       id: "9",
       name: "BBQ Bacon Whopper",
-      price: "$6.99",
+      price: 6.99,
       image:
         "https://www.bk.com/sites/default/files/2021-04/bbq-bacon-whopper-web-hero.png",
       description:
@@ -83,7 +83,7 @@ export const api = [
     {
       id: "10",
       name: "10-Piece Chicken McNuggets",
-      price: "$7.99",
+      price: 7.99,
       image:
         "https://www.mcdonalds.com/content/dam/usa/nfl/assets/nav/arches-logo_50.png",
       description:
@@ -92,7 +92,7 @@ export const api = [
     {
       id: "11",
       name: "Big N' Tasty",
-      price: "$4.99",
+      price: 4.99,
       image:
         "https://www.mcdonalds.com/is/image/content/dam/usa/nfl/assets/nav/arches-logo_50.png",
       description: "A premium burger made with 100",
