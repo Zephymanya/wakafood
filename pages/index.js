@@ -1,24 +1,16 @@
 import { Inter } from 'next/font/google'
 import { api } from '@/utils/api'
 import { useState } from 'react';
-
-console.log(api);
-
-// console.log(api);
+import styles from '../styles/Home.module.css'
 
 export default function Home() {
 
 const [element, setElement]=useState([]);
 
-const panier=(produit)=>{
+const addTopanier=(produit)=>{
   setElement([...element, produit])
 }
 
-function addTopanier(produit) {
-  let product = api.find(p => p.id === produit.id);
-  element.push(product);
-  return element;
-}
 const supprimer=(produit)=>{
   const supprimerElement=element.filter((item)=> item.id !==produit.id)
   setElement( supprimerElement);
@@ -28,27 +20,46 @@ const CalculeTotal=()=>{
 let total=0;
 element.forEach(item => {
   const produit=api.find((prod)=>prod.id===item.id);
-  console.log(produit);
   total+=produit.price * item.quantity;
 });
+
+
 return total;
 }
 
-
-
+console.log(element);
   return (
-  <div>
+  <div  className={styles.content_principal}>
+     
+     <div>
 {
-  element.map((item)=>( 
+  api.map((item)=>( 
     <div key={item.id}>
         <h2>{item.name}</h2>
         <p>{item.price}</p>
         <button onClick={() => addTopanier(item)}>Ajout produit</button>
-        <button onClick={() => addTopanier(item)}>supprimer le produit</button>
     </div>
   ))
-
 }
+ </div>
+
+ <div>
+<h2>Ici le panier</h2>
+
+  {
+  element.map((prod)=>(
+    <div key={prod.id} className={styles.panier}>
+       <p>{prod.name}</p>
+      <p>{prod.price}</p>
+      <p>{prod.image}</p>
+      <button onClick={() => supprimer(prod)}>supprimer</button>
+      </div>
+     
+    ))
+  }
+ </div>
+
+ <h2>total:{CalculeTotal} </h2>
   </div>
   )
 }
