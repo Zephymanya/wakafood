@@ -14,9 +14,9 @@ const panier=(produit)=>{
   setElement([...element, produit])
 }
 
-const newElement=(produit)=>{
-  const newProduit=element.filter((item)=> item.id !==produit.id);
-  setElement(newElement)
+const supprimer=(produit)=>{
+  const supprimerElement=element.filter((item)=> item.id !==produit.id)
+  setElement( supprimerElement);
 }
 
 const CalculeTotal=()=>{
@@ -29,18 +29,26 @@ element.forEach(item => {
 return total;
 }
 
-  console.log(element);
+function addTopanier(productID, cart) {
+  let product = api.find(p => p.id === productID);
+  element.push(product);
+  return cart;
+}
 
   return (
   <div>
 {
-  element.map((item)=>{
+  api.map((item)=>( 
     <div key={item.id}>
         <h2>{item.name}</h2>
         <p>{item.price}</p>
-        <button onClick={() => newElement(item)}>nouveau produit</button>
+        <button onClick={() => addTopanier(item)}>Ajout produit</button>
+        <button onClick={() => addTopanier(item)}>supprimer le produit</button>
     </div>
-  })
+ 
+
+  ))
+
 
 }
   </div>
